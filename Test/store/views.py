@@ -44,3 +44,6 @@ def load_courses(request):
     return render(request,'course_list.html',{'courses': courses})
 
 
+def messages(request):
+
+    return render(request,"message.html")
