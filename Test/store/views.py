@@ -19,10 +19,8 @@ def create_view(request):
         form = MemberCreationForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.info(request,"Order placed")
-            return redirect('add')
+            return redirect('messages')
     return render(request, 'home.html', {'form': form})
-
 
 def update_view(request, pk):
 
